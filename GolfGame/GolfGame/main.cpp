@@ -9,37 +9,14 @@
 //with one from own's layout card. Or pass the turn.
 //7.The card drawn(faceup) from the endealt stock can be discarded if player donot want to replace 
 //Scoring:
-//A:1, 2~9, J=Q=10, K=0, Joker1=20, Joker2=-20
+//A:1, 2~10, J=Q=11, K=0, Joker1=20, Joker2=-20
 //Winning: 
 //The player who has lowest cummulative score win after 10 rounds
 
-class Player
-{
-	Card cards[4];
-	void peak() const;
-	void takeDiscard(Discard& deck);
-	void returnToDiscard(Discard& deck);
-	void skip();
-	void drawFromDiscard();
-	void drawFromDeck();
+int main() {
+
+
+
+
+	return 0;
 }
-
-class Game
-{
-	void run();
-	void step();
-	void turn();
-	void askMove(const int players);
-private:
-	Player* players;
-};
-
-
-using Discard = std::stack<Card>;
-using Deck = std::vector<Card>;
-
-class Card;
-
-
-const Card turnFromTop(Deck& deck, Discard &discardPile);
-void deal_deck(Player* players, int numPlayers, Deck &deck);

@@ -1,86 +1,29 @@
-enum CardType {
-	Face,
-	Trump,
+#pragma once 
+#include <algorithm>
+#include <iostream>
+#include <vector>
 
-	CARDTYPE_MAX = Trump
-};
+namespace card {
+	enum Color {Black,Red,COLOR_MAX = Red};
 
-enum Color {
-	Black,
-	Red,
+	enum Suit {Clubs,Diamonds,Hearts,Spades,};
 
-	COLOR_MAX = Red
-};
+	enum Rank {Ace=1,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,
+		Jack,Queen,King=0,Joker1=-10,Joker2=20,};
 
+	struct Card_Data {
+		Rank rank;
+		Suit suit;
+	};
 
-enum Special {
-	Joker,
+	class Card {
+	public:
+		Card(const Rank r, const Suit s);
+		Card(const Color c, const Special s);
 
-	SPECIAL_MAX = Joker
-};
+		std::vector<FaceCard> cards;
 
-
-enum Suit {
-	Clubs,
-	Diamonds,
-	Hearts,
-	Spades,
-
-	SUIT_MAX = Spades
-};
-
-
-enum Rank {
-	Ace,
-	Two,
-	Three,
-	Four,
-	Five,
-	Six,
-	Seven,
-	Eight,
-	Nine,
-	Ten,
-	Jack,
-	Queen,
-	King,
-	Knight,
-
-	RANK_MAX = Knight
-};
-
-
-struct FaceCard {
-	Rank rank;
-	Suit suit;
-};
-
-
-struct TrumpCard {
-	Color color;
-	Special special;
-};
-
-
-union CardStorage {
-	FaceCard face;
-	TrumpCard trump;
-};
-
-
-class Card {
-public:
-	Card(const Rank r, const Suit s);
-	Card(const Color c, const Special s);
-
-	const int getStrength() const;
-	const CardType getType() const;
-	const Special getSpecial() const;
-	const Color getColor() const;
-	const Rank getRank() const;
-	const Suit getSuit() const;
-
-private:
-	CardType type;
-	CardStorage storage;
-};
+	private:
+		
+	};
+}
