@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="card.hpp" />
     <ClInclude Include="deck.hpp" />
+    <ClInclude Include="player.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
