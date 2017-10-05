@@ -18,8 +18,8 @@ class Game
 private:
 	Player* players;
 };
-
-
+sdfsfd
+sdfsfassdf sdfkl 
 using Discard = std::stack<Card>;
 using Deck = std::vector<Card>;
 
