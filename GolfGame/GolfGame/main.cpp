@@ -12,9 +12,12 @@
 //A:1, 2~10, J=Q=11, K=0, Joker1=20, Joker2=-20
 //Winning: 
 //The player who has lowest cummulative score win after 10 rounds
+#include "card.hpp"
+#include <iostream>
 
 int main() {
-
+	card::Card_Vector c1;
+	c1.print();
 
 
 

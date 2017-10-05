@@ -17,11 +17,13 @@ namespace card {
 	public:
 		Card_Vector();
 		~Card_Vector();
+		void print();
 
 	private:
 		std::vector<Card_Data> cards;
+		friend std::ostream& operator<<(std::ostream& os, const Card_Data& c_d);
 	};
 
 	//printout the card
-	std::ostream& operator<<(std::ostream& os, const Card_Data& c_d);
+	//std::ostream& operator<<(std::ostream& os, const Card_Data& c_d);
 }

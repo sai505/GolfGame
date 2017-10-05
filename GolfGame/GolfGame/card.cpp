@@ -1,5 +1,4 @@
 #include "card.hpp"
-
 card::Card_Vector::Card_Vector() {
 	cards = {
 	{Joker1,Joker},{Joker2,Joker},
@@ -22,8 +21,21 @@ card::Card_Vector::Card_Vector() {
 	};
 }
 
-std::ostream& operator<<(std::ostream& os, const card::Card_Data& c_d) {
-	return os << cd[c_d];
+
+void card::Card_Vector::print() {
+	//std::vector<Card_Data>::iterator it = cards.begin();
+	for (auto i : cards) {
+		std::cout << i << std::endl;
+	}
+
+	//for (it; it != cards.end(); ++it) {
+	//	std::cout << *it << std::endl;
+	//}
 }
+/*
+std::ostream& operator<<(std::ostream& os, card::Card_Vector& c_v) {
+	for(int i=0; i<c_v.)
+	return os;
+}*/
 
 
