@@ -13,13 +13,17 @@
 //Winning: 
 //The player who has lowest cummulative score win after 10 rounds
 #include "card.hpp"
+#include "table.hpp"
 #include <iostream>
 
 int main() {
+	prng.seed(rng());
+
 	card::Card_Vector c1;
 	c1.print();
 
-
+	table::deck game(c1);
+	game.shuffle(c1);
 
 	return 0;
 }

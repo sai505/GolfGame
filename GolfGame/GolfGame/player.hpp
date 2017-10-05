@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <vector>
 
@@ -9,8 +8,6 @@ namespace player {
 
 	};
 
-	std::vector operator+=(const std::vector&, int) {
-
-	}
+	//std::vector operator+=(const std::vector&, int) {
 
 }

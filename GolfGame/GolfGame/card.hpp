@@ -1,4 +1,3 @@
-#pragma once 
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -16,7 +15,7 @@ namespace card {
 	class Card_Vector {
 	public:
 		Card_Vector();
-		~Card_Vector();
+		~Card_Vector() { cards.clear(); }
 		void print();
 
 	private:
