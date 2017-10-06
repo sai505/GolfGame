@@ -1,35 +1,10 @@
 #include "card.hpp"
-card::Card::Card() {
-	cards = {
-	{Joker1,Joker},{Joker2,Joker},
 
-	{Ace, Spades},{Two, Spades},{Three, Spades},{Four, Spades},{Five, Spades},
-	{Six, Spades},{Seven, Spades},{Eight, Spades},{Nine, Spades},{Ten, Spades},
-	{Jack, Spades},{Queen, Spades},{King, Spades},
-
-	{Ace, Clubs},{Two, Clubs},{Three, Clubs},{Four, Clubs},{Five, Clubs},
-	{Six, Clubs},{Seven, Clubs},{Eight, Clubs},{Nine, Clubs},{Ten, Clubs},
-	{Jack, Clubs},{Queen, Clubs},{King, Clubs},
-
-	{Ace, Hearts},{Two, Hearts},{Three, Hearts},{Four, Hearts},{Five, Hearts},
-	{Six, Hearts},{Seven, Hearts},{Eight, Hearts},{Nine, Hearts},{Ten, Hearts},
-	{Jack, Hearts},{Queen, Hearts},{King, Hearts},
-
-	{Ace, Diamonds},{Two, Diamonds},{Three, Diamonds},{Four, Diamonds},{Five, Diamonds},
-	{Six, Diamonds},{Seven, Diamonds},{Eight, Diamonds},{Nine, Diamonds},{Ten, Diamonds},
-	{Jack, Diamonds},{Queen, Diamonds},{King, Diamonds},
-	};
-}
-
-card_vector card::Card::get_data(){
-	return cards;
-}
-
-
-void card::Card::print() {
+void card::print(std::vector<Card_Data>&i) {
 	//std::vector<Card_Data>::iterator it = cards.begin();
 	int j = 1;
-	for (auto &i : cards){
+	
+	for (auto &i : c_vector){
 		switch (i.rank) {
 			case Joker1:std::cout << "Joker1"; break;
 			case Joker2:std::cout << "Joker2"; break;
@@ -65,8 +40,6 @@ void card::Card::print() {
 	//	std::cout << *it << std::endl;
 	//}
 }
-
-
 
 /*
 std::ostream& operator<<(std::ostream& os, card::Card_Vector& c_v) {

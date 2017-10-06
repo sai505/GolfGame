@@ -1,5 +1,6 @@
 #include "table.hpp"
-table::deck::deck(card::Card& c_card) {
+
+/*table::deck::deck(card::Card& c_card) {
 	deck_card = c_card;
 }
 
@@ -20,3 +21,4 @@ void table::deck::replace_card(card_vector &, card_vector &) {
 	//std::move();
 }
 
+*/
