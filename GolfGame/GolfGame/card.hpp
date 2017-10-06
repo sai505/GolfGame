@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+using card_vector = std::vector<card::Card_Data>;
 
 namespace card {
 	enum Suit { Clubs, Diamonds, Hearts, Spades, Joker};
@@ -12,14 +13,15 @@ namespace card {
 		Suit suit;
 	};
 
-	class Card_Vector {
+	class Card {
 	public:
-		Card_Vector();
-		~Card_Vector() { cards.clear(); }
+		Card();
+		~Card() { cards.clear(); }
+		card_vector get_data();
 		void print();
 
 	private:
-		std::vector<Card_Data> cards;
+		card_vector cards;
 		friend std::ostream& operator<<(std::ostream& os, const Card_Data& c_d);
 	};
 

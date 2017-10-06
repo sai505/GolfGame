@@ -19,9 +19,9 @@
 int main() {
 	prng.seed(rng());
 
-	card::Card_Vector c1;
+	card::Card c1;
 	c1.print();
-
+	
 	table::deck game(c1);
 	game.shuffle(c1);
 
