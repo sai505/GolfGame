@@ -1,3 +1,4 @@
+#pragma once
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -5,7 +6,6 @@
 #include <random>
 std::random_device rng;
 std::minstd_rand prng;
-
 
 /*
 using c_vector_pointer = std::vector<card::Card_Data*>; 
