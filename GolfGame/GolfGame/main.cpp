@@ -19,15 +19,10 @@
 int main() {
 	
 	//Create the Card Deck
-	card::Card_Deck c1;
-	c1.print();
-
-	table::deck d1(&c1);
-
-	d1.shuffle();
-	d1.print();
-
-
+	table::deck d = new card::Card_Deck;
+	d.print();
+	d.shuffle();
+	d.print();
 
 	return 0;
 }
