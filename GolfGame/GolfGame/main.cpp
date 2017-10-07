@@ -22,9 +22,11 @@ int main() {
 	card::Card_Deck c1;
 	c1.print();
 
-	table::deck d1(c1);
+	table::deck d1(&c1);
+
 	d1.shuffle();
 	d1.print();
+
 
 
 	return 0;
