@@ -1,5 +1,5 @@
 #include "card.hpp"
-
+#include <random>
 card::Card_Deck::Card_Deck() {
 	c_vector={
 		{ Joker1, Joker },{ Joker2, Joker },
@@ -58,9 +58,15 @@ void card::Card_Deck::print() {
 		}
 		++j;
 	}
+	std::cout << std::endl;
 
 }
-
+void card::Card_Deck::shuffle() {
+	std::random_device rng;
+	std::minstd_rand prng;
+	prng.seed(rng());
+	std::shuffle(c_vector.begin(), c_vector.end(), prng);
+}
 /*
 std::ostream& operator<<(std::ostream& os, card::Card_Vector& c_v) {
 	for(int i=0; i<c_v.)

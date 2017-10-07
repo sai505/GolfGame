@@ -19,6 +19,7 @@ namespace card {
 		Card_Deck();
 		std::vector<Card_Data> c_vector;
 		void print();
+		void shuffle();
 	};
 }
 
