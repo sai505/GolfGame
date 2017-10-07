@@ -18,8 +18,8 @@ namespace card {
 	struct Card_Deck {
 		Card_Deck();
 		std::vector<Card_Data> c_vector;
-		void print();
-		void shuffle();
+		void const print();
+		//void shuffle();
 	};
 }
 

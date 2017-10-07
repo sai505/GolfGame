@@ -22,7 +22,7 @@ card::Card_Deck::Card_Deck() {
 	};
 }
 
-void card::Card_Deck::print() {
+void const card::Card_Deck::print() {
 	//std::vector<Card_Data>::iterator it = cards.begin();
 	int j = 1;
 
@@ -61,12 +61,13 @@ void card::Card_Deck::print() {
 	std::cout << std::endl;
 
 }
+/*
 void card::Card_Deck::shuffle() {
 	std::random_device rng;
 	std::minstd_rand prng;
 	prng.seed(rng());
 	std::shuffle(c_vector.begin(), c_vector.end(), prng);
-}
+}*/
 /*
 std::ostream& operator<<(std::ostream& os, card::Card_Vector& c_v) {
 	for(int i=0; i<c_v.)

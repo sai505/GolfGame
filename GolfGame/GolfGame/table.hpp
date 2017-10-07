@@ -8,15 +8,14 @@
 namespace table {
 	class deck {
 	public:
-		deck(card::Card_Deck&);
+		deck(card::Card_Deck*d) {deck_p = d;};
 		void draw_card();
 		void shuffle();
 		//void discard(card_vector &, card_vector &);
 		//void replace_card(card_vector &, card_vector &) { //std::move(); }
-		void print();
+		void const print();
 
 	private:
-		card::Card_Deck deck_p;
-		std::vector<card::Card_Data> card_vector_p;
+		card::Card_Deck* deck_p;
 	};
 }

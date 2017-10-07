@@ -21,12 +21,9 @@ int main() {
 	//Create the Card Deck
 	card::Card_Deck c1;
 	c1.print();
-	c1.shuffle();
 
-	//table::deck d1(c1);
-	//d1.shuffle();
 	table::deck d1(c1);
-	//c1.shuffle();
+	d1.shuffle();
 	d1.print();
 
 
